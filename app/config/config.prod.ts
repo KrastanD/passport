@@ -7,4 +7,5 @@
  */
 export default {
   API_URL: "CHANGEME",
+  ANON_KEY: "ME_TOO",
 }

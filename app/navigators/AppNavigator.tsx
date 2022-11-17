@@ -4,10 +4,12 @@
  * Generally speaking, it will contain an auth flow (registration, login, forgot password)
  * and a "main" flow which the user will use once logged in.
  */
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import {
   DarkTheme,
   DefaultTheme,
   NavigationContainer,
+  NavigatorScreenParams,
 } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { StackScreenProps } from "@react-navigation/stack"
@@ -15,9 +17,12 @@ import { observer } from "mobx-react-lite"
 import React from "react"
 import { useColorScheme } from "react-native"
 import Config from "../config"
-import {
-  WelcomeScreen,
-} from "../screens"
+import { useStores } from "../models"
+import { WelcomeScreen } from "../screens"
+import { FeedScreen } from "../screens/FeedScreen"
+import { LoginScreen } from "../screens/LoginScreen"
+import { ProfileScreen } from "../screens/ProfileScreen"
+import { RegisterScreen } from "../screens/RegisterScreen"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 
 /**
@@ -35,7 +40,15 @@ import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
  */
 export type AppStackParamList = {
   Welcome: undefined
+  Login: undefined
+  Register: undefined
+  HomeTabs: NavigatorScreenParams<HomeTabsParamList>
   // 🔥 Your screens go here
+}
+
+export type HomeTabsParamList = {
+  Feed: undefined
+  Profile: undefined
 }
 
 /**
@@ -51,13 +64,33 @@ export type AppStackScreenProps<T extends keyof AppStackParamList> = StackScreen
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
 const Stack = createNativeStackNavigator<AppStackParamList>()
+const Tab = createBottomTabNavigator<HomeTabsParamList>()
+
+const HomeTabs = observer(function HomeTabs() {
+  return (
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Screen name="Feed" component={FeedScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  )
+})
 
 const AppStack = observer(function AppStack() {
+  const {
+    authenticationStore: { isUserLoggedIn },
+  } = useStores()
+
   return (
-    <Stack.Navigator
-      screenOptions={{ headerShown: false }}
-    >
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      {isUserLoggedIn ? (
+        <Stack.Screen name="HomeTabs" component={HomeTabs} />
+      ) : (
+        <Stack.Group>
           <Stack.Screen name="Welcome" component={WelcomeScreen} />
+          <Stack.Screen name="Login" component={LoginScreen} />
+          <Stack.Screen name="Register" component={RegisterScreen} />
+        </Stack.Group>
+      )}
       {/** 🔥 Your screens go here */}
     </Stack.Navigator>
   )

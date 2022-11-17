@@ -5,21 +5,14 @@
  * See the [Backend API Integration](https://github.com/infinitered/ignite/blob/master/docs/Backend-API-Integration.md)
  * documentation for more details.
  */
-import {
-  ApisauceInstance,
-  create,
-} from "apisauce"
 import Config from "../../config"
-import type {
-  ApiConfig,
-} from "./api.types"
+import { createClient, SupabaseClient } from "@supabase/supabase-js"
+import AsyncStorage from "@react-native-async-storage/async-storage"
+import { ApiConfig } from "./api.types"
 
-/**
- * Configuring the apisauce instance.
- */
-export const DEFAULT_API_CONFIG: ApiConfig = {
+export const DEFAULT_API_CONFIG = {
   url: Config.API_URL,
-  timeout: 10000,
+  anonKey: Config.ANON_KEY,
 }
 
 /**
@@ -27,23 +20,42 @@ export const DEFAULT_API_CONFIG: ApiConfig = {
  * various requests that you need to call from your backend API.
  */
 export class Api {
-  apisauce: ApisauceInstance
-  config: ApiConfig
+  supabase: SupabaseClient
+  config: string
 
   /**
    * Set up our API instance. Keep this lightweight!
    */
   constructor(config: ApiConfig = DEFAULT_API_CONFIG) {
-    this.config = config
-    this.apisauce = create({
-      baseURL: this.config.url,
-      timeout: this.config.timeout,
-      headers: {
-        Accept: "application/json",
+    this.supabase = createClient(config.url, config.anonKey, {
+      auth: {
+        storage: AsyncStorage as any,
+        autoRefreshToken: true,
+        persistSession: true,
+        detectSessionInUrl: false,
       },
     })
   }
 
+  public async registerWithEmail(email: string, password: string) {
+    const { data, error } = await this.supabase.auth.signUp({
+      email: email,
+      password: password,
+    })
+    return { data, error }
+  }
+
+  public async loginWithEmail(email: string, password: string) {
+    const { data, error } = await this.supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    })
+    return { data, error }
+  }
+
+  public async logout() {
+    await this.supabase.auth.signOut()
+  }
 }
 
 // Singleton instance of the API for convenience
