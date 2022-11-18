@@ -83,3 +83,7 @@ web-build/
 
 # Configurations
 !env.js
+app/screens/LoginScreen.tsx
+
+# Data
+world-cities.csv

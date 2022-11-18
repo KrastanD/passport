@@ -4,10 +4,19 @@ import { StackNavigationProp } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
 import React, { useCallback, useState } from "react"
 import { ViewStyle } from "react-native"
-import { Button, Icon, Screen, TextField, TextFieldAccessoryProps, Text } from "../components"
+import {
+  Button,
+  Icon,
+  Screen,
+  TextField,
+  TextFieldAccessoryProps,
+  Text,
+  Header,
+} from "../components"
 import { useStores } from "../models"
 import { AppStackParamList, HomeTabsParamList } from "../navigators"
 import { api } from "../services/api"
+import { spacing } from "../theme"
 
 export const LoginScreen = observer(function LoginScreen() {
   const navigation =
@@ -48,23 +57,35 @@ export const LoginScreen = observer(function LoginScreen() {
   )
 
   return (
-    <Screen style={$root} preset="scroll" safeAreaEdges={["top", "bottom"]}>
+    <Screen style={$root} preset="scroll" safeAreaEdges={["bottom"]}>
+      <Header leftIcon="back" onLeftPress={() => navigation.goBack()} title="Login" />
       <TextField
+        value={email}
         autoCapitalize="none"
         autoComplete="email"
         autoCorrect={false}
         keyboardType="email-address"
         onChangeText={setEmail}
+        label="Email"
+        containerStyle={$textField}
       />
       <TextField
+        value={password}
         onChangeText={setPassword}
         autoCapitalize="none"
         autoComplete="password"
         autoCorrect={false}
         secureTextEntry={isPasswordHidden}
         RightAccessory={PasswordRightAccessory}
+        label="Password"
+        containerStyle={$textField}
       />
-      <Button disabled={!email || !password} onPress={submitCredentials} text="Log In" />
+      <Button
+        disabled={!email || !password}
+        onPress={submitCredentials}
+        text="Login"
+        style={$button}
+      />
       {error && <Text>{error}</Text>}
     </Screen>
   )
@@ -72,4 +93,14 @@ export const LoginScreen = observer(function LoginScreen() {
 
 const $root: ViewStyle = {
   flex: 1,
+}
+
+const $textField: ViewStyle = {
+  marginBottom: spacing.medium,
+  marginHorizontal: spacing.medium,
+}
+
+const $button: ViewStyle = {
+  marginTop: spacing.medium,
+  marginHorizontal: spacing.medium,
 }
