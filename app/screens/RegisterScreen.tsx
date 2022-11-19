@@ -85,6 +85,7 @@ export const RegisterScreen = observer(function RegisterScreen() {
         onPress={submitCredentials}
         text="Register"
         style={$button}
+        testID="RegisterScreen.RegisterButton"
       />
       {error && <Text>{error}</Text>}
     </Screen>

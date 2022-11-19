@@ -85,6 +85,7 @@ export const LoginScreen = observer(function LoginScreen() {
         onPress={submitCredentials}
         text="Login"
         style={$button}
+        testID="LoginScreen.LoginButton"
       />
       {error && <Text>{error}</Text>}
     </Screen>

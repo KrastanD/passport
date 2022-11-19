@@ -38,19 +38,19 @@ export class Api {
   }
 
   public async registerWithEmail(email: string, password: string) {
-    const { data, error } = await this.supabase.auth.signUp({
+    const { error } = await this.supabase.auth.signUp({
       email: email,
       password: password,
     })
-    return { data, error }
+    return { error }
   }
 
   public async loginWithEmail(email: string, password: string) {
-    const { data, error } = await this.supabase.auth.signInWithPassword({
+    const { error } = await this.supabase.auth.signInWithPassword({
       email: email,
       password: password,
     })
-    return { data, error }
+    return { error }
   }
 
   public async logout() {
