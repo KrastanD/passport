@@ -4,7 +4,7 @@
  * Generally speaking, it will contain an auth flow (registration, login, forgot password)
  * and a "main" flow which the user will use once logged in.
  */
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { BottomTabScreenProps, createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import {
   DarkTheme,
   DefaultTheme,
@@ -18,7 +18,7 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import Config from "../config"
 import { useStores } from "../models"
-import { WelcomeScreen } from "../screens"
+import { CreatePostScreen, WelcomeScreen } from "../screens"
 import { FeedScreen } from "../screens/FeedScreen"
 import { LoginScreen } from "../screens/LoginScreen"
 import { ProfileScreen } from "../screens/ProfileScreen"
@@ -43,6 +43,7 @@ export type AppStackParamList = {
   Login: undefined
   Register: undefined
   HomeTabs: NavigatorScreenParams<HomeTabsParamList>
+  CreatePost: undefined
   // 🔥 Your screens go here
 }
 
@@ -59,6 +60,11 @@ const exitRoutes = Config.exitRoutes
 
 export type AppStackScreenProps<T extends keyof AppStackParamList> = StackScreenProps<
   AppStackParamList,
+  T
+>
+
+export type HomeTabsScreenProps<T extends keyof HomeTabsParamList> = BottomTabScreenProps<
+  HomeTabsParamList,
   T
 >
 
@@ -83,7 +89,10 @@ const AppStack = observer(function AppStack() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {isUserLoggedIn ? (
-        <Stack.Screen name="HomeTabs" component={HomeTabs} />
+        <Stack.Group>
+          <Stack.Screen name="HomeTabs" component={HomeTabs} />
+          <Stack.Screen name="CreatePost" component={CreatePostScreen} />
+        </Stack.Group>
       ) : (
         <Stack.Group>
           <Stack.Screen name="Welcome" component={WelcomeScreen} />

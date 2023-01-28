@@ -87,3 +87,4 @@ app/screens/LoginScreen.tsx
 
 # Data
 world-cities.csv
+.env
