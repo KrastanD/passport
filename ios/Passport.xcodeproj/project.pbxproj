@@ -11,10 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		17B2EBAB8C4F7C0376B41AFC /* libPods-Passport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BF698B09FBEA151D291401 /* libPods-Passport.a */; };
 		2215ACBC1E62C44583DB69A9 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */; };
-		22821D9E7A81DDBC4B59E28F /* libPods-Passport-PassportTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B07E6A0531DAB8956A4CD5A /* libPods-Passport-PassportTests.a */; };
 		400EB2C1E1807E6CBC68B7AB /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */; };
+		44FB42A91C5ECB25B5E9FE18 /* libPods-Passport-PassportTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8197E6097482F013086BC0F /* libPods-Passport-PassportTests.a */; };
+		4760E0B433441A920AD2847A /* libPods-Passport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C0C07F7FA9DB80F698E20F /* libPods-Passport.a */; };
 		BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE406F552862D73000A81E39 /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -32,22 +32,22 @@
 		00E356EE1AD99517003FC87E /* PassportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PassportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassportTests.m; sourceTree = "<group>"; };
-		115DEC45BCB5DCC77CF25CE8 /* Pods-Passport-PassportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport-PassportTests.release.xcconfig"; path = "Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests.release.xcconfig"; sourceTree = "<group>"; };
+		08B5D50DADF01880DA61D315 /* Pods-Passport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport.debug.xcconfig"; path = "Target Support Files/Pods-Passport/Pods-Passport.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Passport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Passport/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Passport/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Passport/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Passport/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Passport/main.m; sourceTree = "<group>"; };
-		19BF698B09FBEA151D291401 /* libPods-Passport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Passport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B7DD157F95872095A410326 /* Pods-Passport-PassportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport-PassportTests.debug.xcconfig"; path = "Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6B07E6A0531DAB8956A4CD5A /* libPods-Passport-PassportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Passport-PassportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Passport/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		AAB5CD9BFD548C136FDF03E6 /* Pods-Passport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport.release.xcconfig"; path = "Target Support Files/Pods-Passport/Pods-Passport.release.xcconfig"; sourceTree = "<group>"; };
+		A10337363268986F3D77E7DB /* Pods-Passport-PassportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport-PassportTests.release.xcconfig"; path = "Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests.release.xcconfig"; sourceTree = "<group>"; };
+		B10B05525A5056C02AD732A7 /* Pods-Passport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport.release.xcconfig"; path = "Target Support Files/Pods-Passport/Pods-Passport.release.xcconfig"; sourceTree = "<group>"; };
+		B3C0C07F7FA9DB80F698E20F /* libPods-Passport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Passport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE406F552862D73000A81E39 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = Passport/BootSplash.storyboard; sourceTree = "<group>"; };
-		D0195070CD5A791D4A4325C4 /* Pods-Passport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport.debug.xcconfig"; path = "Target Support Files/Pods-Passport/Pods-Passport.debug.xcconfig"; sourceTree = "<group>"; };
 		D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Passport-PassportTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		E237728B24D4EA45AE514B91 /* Pods-Passport-PassportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passport-PassportTests.debug.xcconfig"; path = "Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F8197E6097482F013086BC0F /* libPods-Passport-PassportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Passport-PassportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22821D9E7A81DDBC4B59E28F /* libPods-Passport-PassportTests.a in Frameworks */,
+				44FB42A91C5ECB25B5E9FE18 /* libPods-Passport-PassportTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B2EBAB8C4F7C0376B41AFC /* libPods-Passport.a in Frameworks */,
+				4760E0B433441A920AD2847A /* libPods-Passport.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				19BF698B09FBEA151D291401 /* libPods-Passport.a */,
-				6B07E6A0531DAB8956A4CD5A /* libPods-Passport-PassportTests.a */,
+				B3C0C07F7FA9DB80F698E20F /* libPods-Passport.a */,
+				F8197E6097482F013086BC0F /* libPods-Passport-PassportTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,10 +162,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D0195070CD5A791D4A4325C4 /* Pods-Passport.debug.xcconfig */,
-				AAB5CD9BFD548C136FDF03E6 /* Pods-Passport.release.xcconfig */,
-				5B7DD157F95872095A410326 /* Pods-Passport-PassportTests.debug.xcconfig */,
-				115DEC45BCB5DCC77CF25CE8 /* Pods-Passport-PassportTests.release.xcconfig */,
+				08B5D50DADF01880DA61D315 /* Pods-Passport.debug.xcconfig */,
+				B10B05525A5056C02AD732A7 /* Pods-Passport.release.xcconfig */,
+				E237728B24D4EA45AE514B91 /* Pods-Passport-PassportTests.debug.xcconfig */,
+				A10337363268986F3D77E7DB /* Pods-Passport-PassportTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -185,12 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PassportTests" */;
 			buildPhases = (
-				DE6C08BF59F3B60BDAC89D51 /* [CP] Check Pods Manifest.lock */,
+				44B2B3E949A844C40223E7DB /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				BDA327BC3EC9CEA86C22FDF2 /* [CP] Embed Pods Frameworks */,
-				771FCE9E0198D749D03085B4 /* [CP] Copy Pods Resources */,
+				EB2DBC9735C7293883EAFEB4 /* [CP] Embed Pods Frameworks */,
+				A5A6F854EBFD41E697D403FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,14 +206,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Passport" */;
 			buildPhases = (
-				E84919CE98E7A72B48877DF4 /* [CP] Check Pods Manifest.lock */,
+				7AE32037910BD40BD6807E1C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				5E4625A42C11788320EEF3F8 /* [CP] Embed Pods Frameworks */,
-				F9B5C1575A4ECE61E5ADB496 /* [CP] Copy Pods Resources */,
+				1AC422D491E41DF3FBD2A287 /* [CP] Embed Pods Frameworks */,
+				CE5473A4BE3B5B097EFD21EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,7 +296,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		5E4625A42C11788320EEF3F8 /* [CP] Embed Pods Frameworks */ = {
+		1AC422D491E41DF3FBD2A287 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,41 +313,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport/Pods-Passport-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		771FCE9E0198D749D03085B4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BDA327BC3EC9CEA86C22FDF2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE6C08BF59F3B60BDAC89D51 /* [CP] Check Pods Manifest.lock */ = {
+		44B2B3E949A844C40223E7DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -369,7 +335,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E84919CE98E7A72B48877DF4 /* [CP] Check Pods Manifest.lock */ = {
+		7AE32037910BD40BD6807E1C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,7 +357,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9B5C1575A4ECE61E5ADB496 /* [CP] Copy Pods Resources */ = {
+		A5A6F854EBFD41E697D403FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE5473A4BE3B5B097EFD21EE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,6 +389,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport/Pods-Passport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB2DBC9735C7293883EAFEB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Passport-PassportTests/Pods-Passport-PassportTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -462,7 +462,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7DD157F95872095A410326 /* Pods-Passport-PassportTests.debug.xcconfig */;
+			baseConfigurationReference = E237728B24D4EA45AE514B91 /* Pods-Passport-PassportTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,7 +492,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 115DEC45BCB5DCC77CF25CE8 /* Pods-Passport-PassportTests.release.xcconfig */;
+			baseConfigurationReference = A10337363268986F3D77E7DB /* Pods-Passport-PassportTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,7 +519,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0195070CD5A791D4A4325C4 /* Pods-Passport.debug.xcconfig */;
+			baseConfigurationReference = 08B5D50DADF01880DA61D315 /* Pods-Passport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -547,7 +547,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAB5CD9BFD548C136FDF03E6 /* Pods-Passport.release.xcconfig */;
+			baseConfigurationReference = B10B05525A5056C02AD732A7 /* Pods-Passport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
