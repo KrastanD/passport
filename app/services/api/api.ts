@@ -39,22 +39,27 @@ export class Api {
 
   public async registerWithEmail(email: string, password: string) {
     const { error } = await this.supabase.auth.signUp({
-      email: email,
-      password: password,
+      email,
+      password,
     })
     return { error }
   }
 
   public async loginWithEmail(email: string, password: string) {
     const { error } = await this.supabase.auth.signInWithPassword({
-      email: email,
-      password: password,
+      email,
+      password,
     })
     return { error }
   }
 
   public async logout() {
     await this.supabase.auth.signOut()
+  }
+
+  public async getMapsApiKey() {
+    const { data } = await this.supabase.functions.invoke("maps-key")
+    return data as string
   }
 }
 
