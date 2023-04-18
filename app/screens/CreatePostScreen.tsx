@@ -1,12 +1,12 @@
-import React, { FC } from "react"
-import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
-import { StackNavigationProp, StackScreenProps } from "@react-navigation/stack"
-import { AppStackParamList, AppStackScreenProps, HomeTabsParamList } from "../navigators"
-import { Header, Screen, TextField } from "../components"
-import { CompositeNavigationProp, useNavigation } from "@react-navigation/native"
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs"
-import { spacing } from "../theme/spacing"
+import { CompositeNavigationProp, useNavigation } from "@react-navigation/native"
+import { StackNavigationProp, StackScreenProps } from "@react-navigation/stack"
+import { observer } from "mobx-react-lite"
+import React, { FC } from "react"
+import { View, ViewStyle } from "react-native"
+import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete"
+import { Header, Screen } from "../components"
+import { AppStackParamList, AppStackScreenProps, HomeTabsParamList } from "../navigators"
 
 export const CreatePostScreen: FC<StackScreenProps<AppStackScreenProps<"CreatePost">>> = observer(
   function CreatePostScreen() {
@@ -17,10 +17,26 @@ export const CreatePostScreen: FC<StackScreenProps<AppStackScreenProps<"CreatePo
           BottomTabNavigationProp<HomeTabsParamList>
         >
       >()
+
     return (
-      <Screen style={$root} preset="scroll">
+      <Screen style={$root}>
         <Header leftIcon="back" onLeftPress={() => navigation.goBack()} title="Create Post" />
-        <TextField label="Add location" containerStyle={$textField} />
+        <View style={$wrapper}>
+          <GooglePlacesAutocomplete
+            placeholder="Search"
+            minLength={3}
+            onPress={(data) => {
+              console.log(data)
+            }}
+            query={{
+              key: "",
+              language: "en",
+            }}
+            onFail={(error) => console.log(error)}
+            onNotFound={() => console.log("no results")}
+            enablePoweredByContainer={false}
+          />
+        </View>
       </Screen>
     )
   },
@@ -30,7 +46,6 @@ const $root: ViewStyle = {
   flex: 1,
 }
 
-const $textField: ViewStyle = {
-  marginBottom: spacing.medium,
-  marginHorizontal: spacing.medium,
+const $wrapper: ViewStyle = {
+  flexDirection: "row",
 }
