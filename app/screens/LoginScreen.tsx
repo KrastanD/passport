@@ -35,11 +35,13 @@ export const LoginScreen: FC<StackScreenProps<AppStackScreenProps<"Login">>> = o
     const [isPasswordHidden, setIsPasswordHidden] = useState(true)
 
     async function submitCredentials() {
-      const { error } = await api.loginWithEmail(email, password)
+      const { data, error } = await api.loginWithEmail(email, password)
       if (error) {
         setError(error.message)
       } else {
         authenticationStore.setProp("isUserLoggedIn", true)
+        authenticationStore.setProp("userId", data.user.id)
+        authenticationStore.setProp("email", data.user.email)
         navigation.navigate("HomeTabs", { screen: "Feed" })
       }
     }

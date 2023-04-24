@@ -5,14 +5,17 @@ import { withSetPropAction } from "./helpers/withSetPropAction"
  * Model description here for TypeScript hints.
  */
 export const AuthenticationStoreModel = types
-  .model("AuthenticationStore")
+  .model("AuthenticationStore", {
+    userId: types.string,
+    email: types.string,
+  })
   .props({
     isUserLoggedIn: false,
   })
   .actions(withSetPropAction)
   .views((self) => ({
     get isAuthenticated() {
-      return !!self.isUserLoggedIn
+      return self.isUserLoggedIn
     },
   })) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions((self) => ({

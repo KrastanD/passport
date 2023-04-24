@@ -38,19 +38,19 @@ export class Api {
   }
 
   public async registerWithEmail(email: string, password: string) {
-    const { error } = await this.supabase.auth.signUp({
+    const { data, error } = await this.supabase.auth.signUp({
       email,
       password,
     })
-    return { error }
+    return { data, error }
   }
 
   public async loginWithEmail(email: string, password: string) {
-    const { error } = await this.supabase.auth.signInWithPassword({
+    const { data, error } = await this.supabase.auth.signInWithPassword({
       email,
       password,
     })
-    return { error }
+    return { data, error }
   }
 
   public async logout() {
@@ -60,6 +60,27 @@ export class Api {
   public async getMapsApiKey() {
     const { data } = await this.supabase.functions.invoke("maps-key")
     return data as string
+  }
+
+  public async postReviewPost({
+    description,
+    placeId,
+    mainText,
+    secondaryText,
+    text,
+    userId,
+    rating,
+  }) {
+    const { error } = await this.supabase.from("review_posts").insert({
+      place_description: description,
+      place_id: placeId,
+      place_main_text: mainText,
+      place_secondary_text: secondaryText,
+      text,
+      created_by: userId,
+      rating,
+    })
+    return error
   }
 }
 
