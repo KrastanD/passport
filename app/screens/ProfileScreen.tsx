@@ -1,16 +1,17 @@
-import React, { FC } from "react"
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
+import React, { FC } from "react"
+import { TextStyle, View, ViewStyle } from "react-native"
 import { Button, Screen, Text } from "../components"
 import { useStores } from "../models"
-import { api } from "../services/api"
 import { HomeTabsScreenProps } from "../navigators"
-import { BottomTabScreenProps } from "@react-navigation/bottom-tabs"
+import { api } from "../services/api"
+import { spacing } from "../theme"
 
 export const ProfileScreen: FC<BottomTabScreenProps<HomeTabsScreenProps<"Profile">>> = observer(
   function ProfileScreen() {
     const {
-      authenticationStore: { logout },
+      authenticationStore: { email, logout },
     } = useStores()
 
     function onLogout() {
@@ -19,11 +20,16 @@ export const ProfileScreen: FC<BottomTabScreenProps<HomeTabsScreenProps<"Profile
     }
 
     return (
-      <Screen style={$root} preset="scroll" safeAreaEdges={["top"]}>
-        <Text text="profile" />
-        <Button onPress={onLogout}>
-          <Text size="md">Logout</Text>
-        </Button>
+      <Screen style={$root} safeAreaEdges={["top"]}>
+        <View style={$container}>
+          <Text style={$heading}>Profile</Text>
+          <View style={$body}>
+            <Text>Currently logged in as {email}</Text>
+          </View>
+          <Button onPress={onLogout}>
+            <Text size="md">Logout</Text>
+          </Button>
+        </View>
       </Screen>
     )
   },
@@ -31,4 +37,19 @@ export const ProfileScreen: FC<BottomTabScreenProps<HomeTabsScreenProps<"Profile
 
 const $root: ViewStyle = {
   flex: 1,
+  padding: 10,
+}
+
+const $heading: TextStyle = {
+  fontSize: spacing.large,
+  marginBottom: spacing.medium,
+}
+
+const $body: ViewStyle = {
+  flex: 1,
+}
+
+const $container: ViewStyle = {
+  height: "100%",
+  justifyContent: "space-between",
 }
