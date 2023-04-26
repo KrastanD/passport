@@ -1,4 +1,4 @@
-import { Instance, SnapshotIn, SnapshotOut, types } from "mobx-state-tree"
+import { Instance, SnapshotIn, SnapshotOut, applySnapshot, types } from "mobx-state-tree"
 import { withSetPropAction } from "./helpers/withSetPropAction"
 
 export const AuthenticationStoreModel = types
@@ -15,9 +15,7 @@ export const AuthenticationStoreModel = types
   }))
   .actions((self) => ({
     logout() {
-      Object.keys(self).forEach((key) => {
-        self[key].reset && self[key].reset()
-      })
+      applySnapshot(self, {})
     },
   }))
 
