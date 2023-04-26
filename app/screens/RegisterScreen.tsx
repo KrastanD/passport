@@ -35,11 +35,12 @@ export const RegisterScreen: FC<StackScreenProps<AppStackScreenProps<"Register">
     const [isPasswordHidden, setIsPasswordHidden] = useState(true)
 
     async function submitCredentials() {
-      const { error } = await api.registerWithEmail(email, password)
+      const { data, error } = await api.registerWithEmail(email, password)
       if (error) {
         setError(error.message)
       } else {
-        authenticationStore.setProp("isUserLoggedIn", true)
+        authenticationStore.setProp("userId", data.user.id)
+        authenticationStore.setProp("email", data.user.email)
         navigation.navigate("Feed")
       }
     }

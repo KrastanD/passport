@@ -1,28 +1,25 @@
 import { Instance, SnapshotIn, SnapshotOut, types } from "mobx-state-tree"
 import { withSetPropAction } from "./helpers/withSetPropAction"
 
-/**
- * Model description here for TypeScript hints.
- */
 export const AuthenticationStoreModel = types
   .model("AuthenticationStore", {
-    userId: types.string,
-    email: types.string,
+    userId: types.optional(types.string, ""),
+    email: types.optional(types.string, ""),
   })
-  .props({
-    isUserLoggedIn: false,
-  })
+
   .actions(withSetPropAction)
   .views((self) => ({
     get isAuthenticated() {
-      return self.isUserLoggedIn
+      return self.userId !== ""
     },
-  })) // eslint-disable-line @typescript-eslint/no-unused-vars
+  }))
   .actions((self) => ({
     logout() {
-      self.isUserLoggedIn = false
+      Object.keys(self).forEach((key) => {
+        self[key].reset && self[key].reset()
+      })
     },
-  })) // eslint-disable-line @typescript-eslint/no-unused-vars
+  }))
 
 export interface AuthenticationStore extends Instance<typeof AuthenticationStoreModel> {}
 export interface AuthenticationStoreSnapshotOut

@@ -83,12 +83,12 @@ const HomeTabs = observer(function HomeTabs() {
 
 const AppStack = observer(function AppStack() {
   const {
-    authenticationStore: { isUserLoggedIn },
+    authenticationStore: { isAuthenticated },
   } = useStores()
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      {isUserLoggedIn ? (
+      {isAuthenticated ? (
         <Stack.Group>
           <Stack.Screen name="HomeTabs" component={HomeTabs} />
           <Stack.Screen name="CreatePost" component={CreatePostScreen} />
