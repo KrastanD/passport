@@ -85,7 +85,7 @@
     "@types/i18n-js": "3.8.2",
     "@types/jest": "26.0.19",
     "@types/react": "~18.0.27",
-    "@types/react-native": "0.67.8",
+    "@types/react-native": "0.71.6",
     "@typescript-eslint/eslint-plugin": "5.28.0",
     "@typescript-eslint/parser": "5.28.0",
     "babel-jest": "^29.5.0",
